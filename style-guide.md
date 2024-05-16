@@ -20,7 +20,6 @@ The designs were created to the following widths:
 ### Neutral
 
 - White: hsl(0, 0%, 100%)
-- Light Grey: hsl(187, 23%, 85%)
 - Medium Grey: hsl(186, 15%, 59%)
 - Dark Grey: hsl(187, 24%, 22%)
 
