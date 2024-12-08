@@ -1,52 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Contact form</title>
+   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+   <link rel="stylesheet" href="./reset.css">
+   <link rel="stylesheet" href="./styles.css">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+   <title>Frontend Mentor | Contact form</title>
+
 </head>
+
 <body>
 
-  Contact Us
+   <section id="form-section">
+      <div class="container">
+         <h1>Contact Us</h1>
+         <form id='form' action="">
+            <div id="name-container">
+               <div class="item-container">
+                  <label for="first-name" class="required-label">First Name</label>
+                  <input type="text" name="first-name" id="first-name" class="form-item" required autofocus></input>
+                  <p class="warning">This field is required</p>
+               </div>
+               <div class="item-container">
+                  <label for="last-name" class="required-label">Last Name</label>
+                  <input type="text" name="last-name" id="last-name" class="form-item" required></input>
+                  <p class="warning">This field is required</p>
+               </div>
+            </div>
+            <div class="item-container">
+               <label for="email" class="required-label">Email Address</label>
+               <input type="email" name="email" id="email" class="form-item" required></input>
+               <p class="warning">Please enter a valid email address</p>
+            </div>
+            <fieldset>
+               <legend class="required-label">Query Type</legend>
+               <div id="query-container">
+                  <div class="option-item form-item item-container">
+                     <input type="radio" name="query-type" id="general-equiry" required>
+                     <label for="general-equiry">General Enquiry</label>
+                  </div>
+                  <div class="option-item form-item item-container">
+                     <input type="radio" name="query-type" id="support-request" required>
+                     <label for="support-request">Support Request</label>
+                  </div>
+               </div>
+               <p class="warning">Please select a query type</p>
+            </fieldset>
+            <div class="item-container">
+               <label for="message" class="required-label">Message</label>
+               <textarea name="message" id="message" class="form-item" required></textarea>
+               <p class="warning">This field is required</p>
+            </div>
 
-  First Name
-  This field is required
+            <div class="item-container">
+               <div id="consent-container">
+                  <input type="checkbox" name="consent" id="consent" required>
+                  <label for="consent" class="required-label">I consent to being contacted by the team</label>
+               </div>
+               <p class="warning">To submit this form, please consent to being contacted</p>
+            </div>
 
-  Last Name
-  This field is required
 
-  Email Address
-  Please enter a valid email address
-  This field is required
+            <button type="submit" id="form-submit">Submit</button>
+         </form>
 
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
+      </div>
+   </section>
 
-  Message
-  This field is required
+   <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Priyambodo Arundaya Satmika</a>.
+   </div>
 
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
+   <div id="alert">
+      <div class="container">
+         <div id="title">
+            <img src="./assets/images/icon-success-check.svg" alt="">
+            <h4>Message Sent!</h4>
+         </div>
+         <p>Thanks for completing the form. We'll be in touch soon!</p>
 
-  Submit
+      </div>
+   </div>
 
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+   <script src="index.js"></script>
 </body>
 </html>
